@@ -84,6 +84,8 @@ function! Align(char)
          "       echo 'iCurLine:'.iCurLine.', iCurPos:'.iCurPos
         endwhile
 endf
-imap ) <Esc>:call Align(')')<CR>a
-imap ] <Esc>:call Align(']')<CR>a
 
+if !exists("align_dont_map_keys")
+    imap ) <Esc>:call Align(')')<CR>a
+    imap ] <Esc>:call Align(']')<CR>a
+endif
