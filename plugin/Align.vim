@@ -6,6 +6,12 @@
 " Version: 0.1
 "
 " Last Change: 2006 Thu Mar 16
+
+if exists("loaded_align")
+    finish
+endif
+let loaded_align = 1
+
 function! Ins(char)
         exec "normal a".a:char
 endf
